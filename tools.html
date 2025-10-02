@@ -92,62 +92,68 @@
 
     <!-- About Start -->
 
-  <div class="container">
-    <h1>QR Code Generator</h1>
-    <div class="form-group">
-      <label for="input-text">Text or URL</label>
-      <input type="text" id="input-text" placeholder="https://example.com" />
+  <div class="container d-flex justify-content-center align-items-center my-5" style="min-height: 70vh;">
+  <div class="card shadow-lg w-100" style="max-width: 600px; border-radius: 1rem;">
+    <div class="card-body">
+      <h1 class="card-title text-center mb-4">QR Code Generator</h1>
+      <div class="form-group mb-3">
+        <label for="input-text">Text or URL</label>
+        <input type="text" id="input-text" class="form-control" placeholder="https://example.com" />
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-4 form-group">
+          <label for="input-size">Size (px)</label>
+          <input type="number" id="input-size" class="form-control" min="100" max="1000" value="300" />
+        </div>
+        <div class="col-md-4 form-group">
+          <label for="input-fg">Foreground Color</label>
+          <input type="color" id="input-fg" class="form-control form-control-color" value="#000000" />
+        </div>
+        <div class="col-md-4 form-group">
+          <label for="input-bg">Background Color</label>
+          <input type="color" id="input-bg" class="form-control form-control-color" value="#ffffff" />
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-4 form-group">
+          <label for="input-shape">Dot Style</label>
+          <select id="input-shape" class="form-select">
+            <option value="square">Square</option>
+            <option value="dots">Dots</option>
+            <option value="extra-rounded">Extra Rounded</option>
+            <option value="classy">Classy</option>
+            <option value="rounded">Rounded</option>
+          </select>
+        </div>
+        <div class="col-md-4 form-group">
+          <label for="input-corners">Corner Style</label>
+          <select id="input-corners" class="form-select">
+            <option value="square">Square</option>
+            <option value="dot">Dot</option>
+          </select>
+        </div>
+        <div class="col-md-4 form-group">
+          <label for="input-level">Error Correction</label>
+          <select id="input-level" class="form-select">
+            <option value="L">L (Low)</option>
+            <option value="M" selected>M (Medium)</option>
+            <option value="Q">Q (Quartile)</option>
+            <option value="H">H (High)</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group mb-3">
+        <label for="input-logo">Logo Image (optional)</label>
+        <input type="file" id="input-logo" class="form-control" accept="image/*" />
+      </div>
+      <div class="d-flex justify-content-between mb-3">
+        <button id="generate" class="btn btn-primary w-50 me-2">Generate QR</button>
+        <button id="download" class="btn btn-success w-50 ms-2" disabled>Download PNG</button>
+      </div>
+      <div id="qr-code" class="d-flex justify-content-center"></div>
     </div>
-    <div class="form-row">
-      <div class="form-group">
-        <label for="input-size">Size (px)</label>
-        <input type="number" id="input-size" min="100" max="1000" value="300" />
-      </div>
-      <div class="form-group">
-        <label for="input-fg">Foreground Color</label>
-        <input type="color" id="input-fg" value="#000000" />
-      </div>
-      <div class="form-group">
-        <label for="input-bg">Background Color</label>
-        <input type="color" id="input-bg" value="#ffffff" />
-      </div>
-    </div>
-    <div class="form-row">
-      <div class="form-group">
-        <label for="input-shape">Dot Style</label>
-        <select id="input-shape">
-          <option value="square">Square</option>
-          <option value="dots">Dots</option>
-          <option value="extra-rounded">Extra Rounded</option>
-          <option value="classy">Classy</option>
-          <option value="rounded">Rounded</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="input-corners">Corner Style</label>
-        <select id="input-corners">
-          <option value="square">Square</option>
-          <option value="dot">Dot</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="input-level">Error Correction</label>
-        <select id="input-level">
-          <option value="L">L (Low)</option>
-          <option value="M" selected>M (Medium)</option>
-          <option value="Q">Q (Quartile)</option>
-          <option value="H">H (High)</option>
-        </select>
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="input-logo">Logo Image (optional)</label>
-      <input type="file" id="input-logo" accept="image/*" />
-    </div>
-    <button id="generate">Generate QR</button>
-    <button id="download" disabled>Download PNG</button>
-    <div id="qr-code"></div>
   </div>
+</div>
 
   <script>
     // Initialize QRCodeStyling instance
@@ -217,13 +223,11 @@
     });
   </script>
 
-</html>
 
     <!-- About End -->
 
 
     <!-- Footer Start -->
-	<centre-left>
     <div class="container-fluid bg-secondary text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
@@ -278,14 +282,12 @@
                        &copy; <a class="border-bottom" href="#">Lancealot</a>, All Right Reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
-                        
                         Designed By <a class="border-bottom" href="https://naveenk1013.github.io/Portfolio/">Team Lancealot</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-	</centre-left>
     <!-- Footer End -->
 
 
